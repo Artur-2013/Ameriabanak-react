@@ -6,6 +6,7 @@ import DigitalHero from './componets/DigitalHero';
 import DigitalCards from './componets/DigitalCards';
 import EcosystemCards from './componets/EcosystemCards';
 import OnlineServices from './componets/OnlineServices';
+import Footer from './componets/Footer';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <DigitalCards />
         <EcosystemCards />
         <OnlineServices />
+        <Footer />
       </div>
     </BrowserRouter>
   );
