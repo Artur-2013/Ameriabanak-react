@@ -1,12 +1,17 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import TopBar from './componets/TopBar';
+import Header from './componets/Header';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <TopBar />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <TopBar />
+        <Header />
+      </div>
+    </BrowserRouter>
   );
 }
 
