@@ -5,6 +5,7 @@ import Header from './componets/Header';
 import DigitalHero from './componets/DigitalHero';
 import DigitalCards from './componets/DigitalCards';
 import EcosystemCards from './componets/EcosystemCards';
+import OnlineServices from './componets/OnlineServices';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <DigitalHero />
         <DigitalCards />
         <EcosystemCards />
+        <OnlineServices />
       </div>
     </BrowserRouter>
   );
