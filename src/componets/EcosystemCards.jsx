@@ -33,6 +33,36 @@ function EcosystemCards() {
       primaryLink: '#mycar-apply',
       secondaryLink: '#mycar-info',
     },
+    {
+      id: 'myinvest',
+      img: 'https://ameriabank.am/Portals/0/Images/campaigns/mycampaigns/invest.png',
+      alt: 'MYINVEST',
+      text: 'Ներդրումներ կատարելու քո օնլայն հարթակը',
+      primaryBtn: 'Բացել հիմա',
+      secondaryBtn: 'Իմանալ ավելին',
+      primaryLink: '#myinvest-open',
+      secondaryLink: '#myinvest-info',
+    },
+    {
+      id: 'mybusiness',
+      img: 'https://ameriabank.am/Portals/0/Images/campaigns/mycampaigns/business.png',
+      alt: 'MYBUSINESS',
+      text: 'Բիզնեսը կառավարելու քո օնլայն հարթակը',
+      primaryBtn: 'Դիմել հիմա',
+      secondaryBtn: 'Իմանալ ավելին',
+      primaryLink: '#mybusiness-apply',
+      secondaryLink: '#mybusiness-info',
+    },
+    {
+      id: 'myameriastar',
+      img: 'https://ameriabank.am/Portals/0/Images/campaigns/mycampaigns/star.png',
+      alt: 'MYAMERIA STAR',
+      text: 'Գումարը կառավարելու երեխաների հավելվածը',
+      primaryBtn: 'Դիմել օնլայն',
+      secondaryBtn: 'Իմանալ ավելին',
+      primaryLink: '#myameriastar-apply',
+      secondaryLink: '#myameriastar-info',
+    },
   ];
 
   return (
