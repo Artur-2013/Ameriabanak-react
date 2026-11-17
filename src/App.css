@@ -1,0 +1,194 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: hidden; }
+
+:root {
+  --accent: #7ab84a;
+  --text: #111;
+  --muted: #666;
+}
+
+.hdr { font-family: "Noto Sans Armenian", system-ui, sans-serif; width: 100%; }
+.hdr a { text-decoration: none; color: inherit; }
+.hdr-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== Վերին շերտ ===== */
+.hdr-top { background: #fafafa; border-bottom: 1px solid #eee; }
+.hdr-top-inner { display: flex; justify-content: space-between; align-items: center; height: 56px; }
+.hdr-top-links { display: flex; gap: 24px; }
+.hdr-top-links a { font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+.hdr-utils { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: 16px; }
+.hdr-util { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.hdr-util:hover { color: var(--accent); }
+.hdr-util-icon { display: inline-flex; }
+.hdr-util-icon svg, .hdr-search svg { width: 26px; height: 26px; }
+.hdr-search, .hdr-lang { background: none; border: 0; cursor: pointer; font: inherit; color: inherit; display: inline-flex; align-items: center; padding: 0; }
+.hdr-search:hover { color: var(--accent); }
+.hdr-lang { color: var(--accent); font-weight: 600; gap: 8px; }
+.hdr-caret { border: 6px solid transparent; border-top-color: var(--accent); border-bottom: 0; display: inline-block; }
+
+/* ===== Հիմնական շերտ ===== */
+.hdr-main { background: #fff; border-bottom: 1px solid #eee; position: relative; }
+.hdr-main-inner { display: flex; align-items: center; gap: 40px; height: 90px; }
+
+.hdr-logo { display: flex; align-items: center; gap: 8px; font-size: 30px; letter-spacing: 1px; white-space: nowrap; }
+.hdr-logo-mark {
+  width: 40px; height: 40px; border: 1.5px solid var(--accent); border-radius: 6px;
+  color: var(--accent); display: grid; place-items: center; font-weight: 700; flex-shrink: 0;
+}
+.hdr-logo-text b { color: var(--accent); font-weight: 600; }
+
+.hdr-nav { display: flex; gap: 40px; flex: 1; }
+.hdr-nav a { font-weight: 700; font-size: 18px; color: var(--text); transition: color .15s; white-space: nowrap; }
+.hdr-nav a:hover, .hdr-nav a.active { color: var(--accent); }
+
+.hdr-cta {
+  background: var(--accent); color: #fff !important; padding: 16px 26px;
+  border-radius: 16px; font-size: 18px; display: flex; align-items: center; gap: 10px;
+  white-space: nowrap; transition: filter .15s;
+  width: 100%; max-width: 240px; justify-content: center;
+}
+.hdr-cta:hover { filter: brightness(0.93); }
+.hdr-cta span { font-size: 24px; line-height: 1; }
+.hdr-cta-mobile { display: none; }
+
+/* Բուրգեր կոճակ (մեծ էկրաններին թաքնված է) */
+.hdr-burger {
+  display: none; background: none; border: 0; cursor: pointer;
+  width: 44px; height: 44px; padding: 10px; margin-left: auto; flex-shrink: 0;
+  flex-direction: column; justify-content: center; gap: 6px;
+}
+.hdr-burger span {
+  display: block; height: 2.5px; width: 100%;
+  background: var(--text); border-radius: 2px;
+  transition: transform .25s, opacity .2s;
+}
+.hdr-burger.open span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+.hdr-burger.open span:nth-child(2) { opacity: 0; }
+.hdr-burger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+
+/* =========================================================
+   ՄԵԾ ԷԿՐԱՆՆԵՐ
+   ========================================================= */
+
+/* 1321–1500px — վերին շերտը մի փոքր կոմպակտ */
+@media (min-width: 1321px) and (max-width: 1500px) {
+  .hdr-top-links a { font-size: 16px; }
+  .hdr-utils { gap: 18px; font-size: 15px; }
+}
+
+/* ≥ 1600px — Full HD */
+@media (min-width: 1600px) {
+  .hdr-container { max-width: 1440px; padding: 0 32px; }
+  .hdr-top-inner { height: 60px; }
+  .hdr-top-links a { font-size: 19px; }
+  .hdr-main-inner { height: 100px; gap: 48px; }
+  .hdr-logo { font-size: 34px; }
+  .hdr-logo-mark { width: 44px; height: 44px; }
+  .hdr-nav { gap: 48px; }
+  .hdr-nav a { font-size: 20px; }
+  .hdr-cta { font-size: 20px; padding: 18px 30px; }
+}
+
+/* ≥ 1900px — 1920px մոնիտորներ */
+@media (min-width: 1900px) {
+  .hdr-container { max-width: 1680px; padding: 0 40px; }
+  .hdr-top-inner { height: 64px; }
+  .hdr-top-links a { font-size: 20px; }
+  .hdr-utils { font-size: 18px; gap: 26px; }
+  .hdr-main-inner { height: 108px; gap: 56px; }
+  .hdr-nav { gap: 56px; }
+  .hdr-nav a { font-size: 21px; }
+  .hdr-cta { font-size: 21px; }
+}
+
+/* ≥ 2560px — 2K/4K */
+@media (min-width: 2560px) {
+  .hdr-container { max-width: 2100px; }
+  .hdr-top-links a, .hdr-nav a, .hdr-cta { font-size: 24px; }
+  .hdr-utils { font-size: 21px; }
+  .hdr-logo { font-size: 40px; }
+  .hdr-main-inner { height: 130px; }
+}
+
+
+/* =========================================================
+   ՓՈՔՐ ԷԿՐԱՆՆԵՐ
+   ========================================================= */
+
+/* ≤ 1320px — մենյուն դառնում է բացվող (բուրգեր) */
+@media (max-width: 1320px) {
+  .hdr-burger { display: flex; }
+  .hdr-main-inner { height: 76px; }
+  .hdr-cta { display: none; }
+
+  .hdr-nav {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; flex: none;
+    background: #fff; border-bottom: 1px solid #eee;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .08);
+    max-height: 0; overflow: hidden; visibility: hidden;
+    transition: max-height .3s ease, visibility .3s;
+    z-index: 100;
+  }
+  .hdr-nav.open { max-height: 80vh; visibility: visible; overflow-y: auto; }
+  .hdr-nav a { padding: 18px 24px; font-size: 18px; border-top: 1px solid #f1f1f1; }
+  .hdr-nav a.hdr-cta-mobile {
+    display: flex; justify-content: center;
+    margin: 16px 24px 20px; padding: 16px 24px; border-top: 0; color: #fff;
+  }
+}
+
+/* ≤ 768px — մեծ հեռախոսներ / փոքր պլանշետներ */
+@media (max-width: 768px) {
+  .hdr-container { padding: 0 16px; }
+  .hdr-top-inner { height: 48px; }
+  .hdr-top-links { gap: 16px; }
+  .hdr-top-links a { font-size: 14px; }
+  .hdr-utils { gap: 14px; }
+  .hdr-util { font-size: 0; gap: 0; }
+  .hdr-util-icon svg, .hdr-search svg { width: 22px; height: 22px; }
+  .hdr-nav a { padding: 16px; }
+  .hdr-nav a.hdr-cta-mobile { margin: 16px; }
+}
+
+/* ≤ 480px — հեռախոսներ */
+@media (max-width: 480px) {
+  .hdr-top-links { gap: 12px; }
+  .hdr-top-links a { font-size: 12px; letter-spacing: 0; }
+  .hdr-top-links a:nth-child(3) { display: none; }
+  .hdr-utils .hdr-util:nth-child(-n+2) { display: none; }
+  .hdr-main-inner { height: 64px; gap: 16px; }
+  .hdr-logo { font-size: 22px; }
+  .hdr-logo-mark { width: 32px; height: 32px; }
+  .hdr-lang { font-size: 14px; }
+}
+
+/* ≤ 360px — փոքր հեռախոսներ */
+@media (max-width: 360px) {
+  .hdr-container { padding: 0 12px; }
+  .hdr-top-links { gap: 10px; }
+  .hdr-top-links a { font-size: 11px; }
+  .hdr-utils { gap: 10px; }
+  .hdr-utils .hdr-util:nth-child(3) { display: none; }
+  .hdr-logo { font-size: 19px; letter-spacing: 0.5px; }
+  .hdr-logo-mark { width: 28px; height: 28px; font-size: 14px; }
+  .hdr-burger { width: 40px; height: 40px; padding: 9px; }
+  .hdr-nav a { padding: 14px 12px; font-size: 16px; }
+  .hdr-nav a.hdr-cta-mobile { margin: 12px; font-size: 16px; }
+}
+
+/* ≤ 320px — շատ նեղ էկրաններ (մինչև 300px) */
+@media (max-width: 320px) {
+  .hdr-top-links a:nth-child(2) { display: none; }
+  .hdr-utils .hdr-util { display: none; }
+  .hdr-logo { font-size: 17px; }
+  .hdr-logo-mark { width: 26px; height: 26px; }
+  .hdr-main-inner { gap: 8px; }
+}
+
+/* «Նվազեցված անիմացիա» կարգավորում */
+@media (prefers-reduced-motion: reduce) {
+  .hdr-nav, .hdr-burger span { transition: none; }
+}
