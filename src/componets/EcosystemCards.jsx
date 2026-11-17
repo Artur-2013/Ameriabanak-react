@@ -63,6 +63,36 @@ function EcosystemCards() {
       primaryLink: '#myameriastar-apply',
       secondaryLink: '#myameriastar-info',
     },
+    {
+      id: 'mypay',
+      img: 'https://ameriabank.am/Portals/0/Images/campaigns/mycampaigns/pay.png',
+      alt: 'MYPAY',
+      text: 'Գնելու և մաս-մաս վճարելու քո օնլայն գործիքը',
+      primaryBtn: 'Դիմել հիմա',
+      secondaryBtn: 'Իմանալ ավելին',
+      primaryLink: '#mypay-apply',
+      secondaryLink: '#mypay-info',
+    },
+    {
+      id: 'myeventhub',
+      img: 'https://ameriabank.am/Portals/0/Images/campaigns/mycampaigns/myeventhub.png',
+      alt: 'MYEVENTHUB',
+      text: 'Քո սիրելի միջոցառումներին և փորձառություններին միանալու օնլայն հարթակը',
+      primaryBtn: 'Գնել տոմս',
+      secondaryBtn: 'Իմանալ ավելին',
+      primaryLink: '#myeventhub-buy',
+      secondaryLink: '#myeventhub-info',
+    },
+    {
+      id: 'mytour',
+      img: 'https://ameriabank.am/Portals/0/Images/campaigns/mycampaigns/mytour.png',
+      alt: 'MYTOUR',
+      text: 'Ուղևորությունդ պլանավորելու քո օնլայն հարթակը',
+      primaryBtn: 'Ամրագրել օնլայն',
+      secondaryBtn: 'Իմանալ ավելին',
+      primaryLink: '#mytour-book',
+      secondaryLink: '#mytour-info',
+    },
   ];
 
   return (
@@ -70,15 +100,10 @@ function EcosystemCards() {
       <div className="ecosystem-container">
         {items.map((item) => (
           <div key={item.id} className="ecosystem-card">
-            {/* Նկարի հատված */}
             <div className="ecosystem-img-box">
               <img src={item.img} alt={item.alt} />
             </div>
-
-            {/* Նկարագրության տեքստ */}
             <p className="ecosystem-description">{item.text}</p>
-
-            {/* Կոճակների հատված */}
             <div className="ecosystem-actions">
               <a href={item.primaryLink} className="eco-btn eco-btn-green">
                 {item.primaryBtn}
