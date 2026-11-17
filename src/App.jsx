@@ -4,6 +4,7 @@ import TopBar from './componets/TopBar';
 import Header from './componets/Header';
 import DigitalHero from './componets/DigitalHero';
 import DigitalCards from './componets/DigitalCards';
+import EcosystemCards from './componets/EcosystemCards';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <DigitalHero />
         <DigitalCards />
+        <EcosystemCards />
       </div>
     </BrowserRouter>
   );
