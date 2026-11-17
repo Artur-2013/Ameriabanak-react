@@ -1,9 +1,15 @@
 .top-nav {
   display: flex;
-  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
   padding: 12px 200px;
   background: #fafafa;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.top-nav__tabs {
+  display: flex;
+  gap: 14px;
 }
 
 .top-nav__tab {
@@ -17,4 +23,32 @@
 .top-nav__tab.active,
 .top-nav__tab:hover {
   color: #6cc04a;
+}
+
+.top-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.top-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+  text-decoration: none;
+}
+
+.top-nav__link:hover {
+  color: #6cc04a;
+}
+
+.top-nav__search {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  color: #111;
+  padding: 0;
 }
