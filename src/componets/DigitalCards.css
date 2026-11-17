@@ -1,0 +1,111 @@
+.digital-cards-section {
+  background-color: #ffffff;
+  padding: 48px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.digital-cards-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.promo-card {
+  position: relative;
+  height: 290px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Ձախ քարտ (MyPay վիդեո) */
+.mypay-card {
+  background-color: #5bb523;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px 28px;
+  box-sizing: border-box;
+}
+
+.mypay-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mypay-card:hover .mypay-bg-video {
+  transform: scale(1.04);
+}
+
+.mypay-caption {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+  transition: transform 0.35s ease;
+}
+
+.mypay-card:hover .mypay-caption {
+  transform: translateY(-4px);
+}
+
+/* Աջ քարտ (My Home / My Car) */
+.my-dynamic-card {
+  background-color: #f3f5f9;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-dynamic-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.my-static-word {
+  color: #111111;
+}
+
+.my-rolling-wrapper {
+  height: 48px;
+  overflow: hidden;
+}
+
+.my-rolling-list {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.my-green-word {
+  height: 48px;
+  line-height: 48px;
+  color: #6cc04a;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .digital-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
