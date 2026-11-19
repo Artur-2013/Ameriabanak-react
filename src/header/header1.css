@@ -1,0 +1,35 @@
+.top-bar {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: sans-serif;
+}
+
+.top-bar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.top-bar-link {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: color 0.2s ease;
+}
+
+.top-bar-link:hover {
+  color: #00a859; /* Ամերիաբանկի կանաչ երանգը */
+}
