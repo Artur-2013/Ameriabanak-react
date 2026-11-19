@@ -77,15 +77,15 @@ const allSpecialOffers = [
       "https://ameriabank.am/Portals/0/Images/campaigns/norq-marash-branch/nor-norq-branch-home.jpg",
     link: "#nork-branch",
   },
-//   {
-//     id: 10,
-//     title: "Student վարկ",
-//     description:
-//       "Ստացիր Student վարկ, ինքնուրույն վճարիր քո ուսման վարձը և սկսիր կառուցել քո մեծ ապագան",
-//     image:
-//       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-//     link: "#student-loan",
-//   },
+  {
+    id: 10,
+    title: "Student վարկ",
+    description:
+      "Ստացիր Student վարկ, ինքնուրույն վճարիր քո ուսման վարձը և սկսիր կառուցել քո մեծ ապագան",
+    image:
+      "https://ameriabank.am/Portals/0/Images/campaigns/student-loan/student-loan-offer-arm.png",
+    link: "#student-loan",
+  },
 //   {
 //     id: 11,
 //     title: "Դեպի Փարիզ Ամերիայի...",
