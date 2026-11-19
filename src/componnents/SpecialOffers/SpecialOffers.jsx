@@ -68,15 +68,15 @@ const allSpecialOffers = [
       "https://ameriabank.am/Portals/0/Images/special-offers/break-the-glass-offer.png",
     link: "#higher-deposit",
   },
-//   {
-//     id: 9,
-//     title: "Ամերիան արդեն Նորք-...",
-//     description:
-//       "Դարձիր Ամերիայի հաճախորդ նոր մասնաճյուղում մինչև 04.01.27թ. և օգտվիր հատուկ առաջարկից",
-//     image:
-//       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-//     link: "#nork-branch",
-//   },
+  {
+    id: 9,
+    title: "Ամերիան արդեն Նորք-...",
+    description:
+      "Դարձիր Ամերիայի հաճախորդ նոր մասնաճյուղում մինչև 04.01.27թ. և օգտվիր հատուկ առաջարկից",
+    image:
+      "https://ameriabank.am/Portals/0/Images/campaigns/norq-marash-branch/nor-norq-branch-home.jpg",
+    link: "#nork-branch",
+  },
 //   {
 //     id: 10,
 //     title: "Student վարկ",
