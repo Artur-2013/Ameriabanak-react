@@ -7,6 +7,7 @@ import ChatButton from "./componnents/Hero/ChatButton";
 import UsefulLinks from "./componnents/UsefulLinks/UsefulLinks";
 import OffersSlider from "./componnents/OffersSlider/OffersSlider";
 import AmeriaEcosystem from "./componnents/AmeriaEcosystem/AmeriaEcosystem";
+import SpecialOffers from "./componnents/SpecialOffers/SpecialOffers";
 import "./componnents/Header/Header.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <UsefulLinks />
       <OffersSlider/>
       <AmeriaEcosystem/>
+      <SpecialOffers/>
     </>
   );
 }
