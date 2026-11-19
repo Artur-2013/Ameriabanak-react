@@ -86,15 +86,15 @@ const allSpecialOffers = [
       "https://ameriabank.am/Portals/0/Images/campaigns/student-loan/student-loan-offer-arm.png",
     link: "#student-loan",
   },
-//   {
-//     id: 11,
-//     title: "Դեպի Փարիզ Ամերիայի...",
-//     description:
-//       "Բացահայտիր Փարիզը Ամերիայի Visa քարտով․ ստացիր զեղչեր ու VIP ծառայություններ ռեստորանների, տեսարժան ...",
-//     image:
-//       "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80",
-//     link: "#visa-paris",
-//   },
+  {
+    id: 11,
+    title: "Դեպի Փարիզ Ամերիայի...",
+    description:
+      "Բացահայտիր Փարիզը Ամերիայի Visa քարտով․ ստացիր զեղչեր ու VIP ծառայություններ ռեստորանների, տեսարժան ...",
+    image:
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80",
+    link: "#visa-paris",
+  },
 //   {
 //     id: 12,
 //     title: "Դեպի Լոնդոն Ամերիայի...",
