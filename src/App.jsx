@@ -6,6 +6,7 @@ import FeedbackTab from "./componnents/Hero/FeedbackTab";
 import ChatButton from "./componnents/Hero/ChatButton";
 import UsefulLinks from "./componnents/UsefulLinks/UsefulLinks";
 import OffersSlider from "./componnents/OffersSlider/OffersSlider";
+import AmeriaEcosystem from "./componnents/AmeriaEcosystem/AmeriaEcosystem";
 import "./componnents/Header/Header.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <ChatButton />
       <UsefulLinks />
       <OffersSlider/>
+      <AmeriaEcosystem/>
     </>
   );
 }
