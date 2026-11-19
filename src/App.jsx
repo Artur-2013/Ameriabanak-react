@@ -4,10 +4,11 @@ import Hero from "./componnents/Hero/Hero";
 import PromoCards from "./componnents/PromoCards/PromoCards";
 import FeedbackTab from "./componnents/Hero/FeedbackTab";
 import ChatButton from "./componnents/Hero/ChatButton";
-import UsefulLinks from "./componnents/UsefulLinks/UsefulLinks";
+import UsefullLinks from "./componnents/UsefulLinks/UsefulLinks";
 import OffersSlider from "./componnents/OffersSlider/OffersSlider";
 import AmeriaEcosystem from "./componnents/AmeriaEcosystem/AmeriaEcosystem";
 import SpecialOffers from "./componnents/SpecialOffers/SpecialOffers";
+import CurrencySection from "./componnents/CurrencySection/CurrencySection";
 import "./componnents/Header/Header.css";
 
 function App() {
@@ -19,10 +20,11 @@ function App() {
       <PromoCards />
       <FeedbackTab />
       <ChatButton />
-      <UsefulLinks />
-      <OffersSlider/>
-      <AmeriaEcosystem/>
-      <SpecialOffers/>
+      <UsefullLinks />
+      <OffersSlider />
+      <AmeriaEcosystem />
+      <SpecialOffers />
+      <CurrencySection />
     </>
   );
 }
