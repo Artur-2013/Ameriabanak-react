@@ -28,15 +28,15 @@ export default function UsefulLinks() {
           </div>
           <span className="useful-links__card-title">Փոխանցումներ</span>
         </a>
-
-        {/* <a href="#loans" className="useful-links__card">
+         <a href="#loans" className="useful-links__card">
           <div className="useful-links__icon">
             <BadgePercent size={32} color="#7ec04f" strokeWidth={1.5} />
           </div>
           <span className="useful-links__card-title">Օնլայն վարկեր</span>
         </a>
 
-        <a href="#remote-banking" className="useful-links__card">
+
+        {/*<a href="#remote-banking" className="useful-links__card">
           <div className="useful-links__icon">
             <Smartphone size={32} color="#7ec04f" strokeWidth={1.5} />
           </div>
