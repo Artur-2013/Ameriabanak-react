@@ -20,7 +20,7 @@
   color: #111;
 }
 
-.top-nav__tab.active,
+
 .top-nav__tab:hover {
   color: #6cc04a;
 }
@@ -111,4 +111,23 @@
 
 .top-nav__lang-list li.selected {
   color: #6cc04a;
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 200px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.main-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.main-header__logo img {
+  height: 30px;
+  display: block;
 }
