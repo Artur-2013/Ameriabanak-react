@@ -10,15 +10,15 @@ const allSpecialOffers = [
     image:"https://ameriabank.am/Portals/0/Images/special-offers/refinance-arm.png",
     link: "#property-loan",
   },
-//   {
-//     id: 2,
-//     title: "Քո նոր մեքենան 0%...",
-//     description:
-//       "Արի mycar.am, ընտրիր քո մեքենան առաջնային շուկայից և ձևակերպիր օնլայն ավտովարկ 0% կանխավճարով ու ավելի ցածր ...",
-//     image:
-//       "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
-//     link: "#auto-loan",
-//   },
+  {
+    id: 2,
+    title: "Քո նոր մեքենան 0%...",
+    description:
+      "Արի mycar.am, ընտրիր քո մեքենան առաջնային շուկայից և ձևակերպիր օնլայն ավտովարկ 0% կանխավճարով ու ավելի ցածր ...",
+    image:
+      "https://ameriabank.am/Portals/0/Images/special-offers/car-down-payment-offer-arm.png",
+    link: "#auto-loan",
+  },
 //   {
 //     id: 3,
 //     title: "Amazon-ի 115 նվեր քարտ",
