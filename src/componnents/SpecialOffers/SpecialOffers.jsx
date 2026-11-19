@@ -19,15 +19,15 @@ const allSpecialOffers = [
       "https://ameriabank.am/Portals/0/Images/special-offers/car-down-payment-offer-arm.png",
     link: "#auto-loan",
   },
-//   {
-//     id: 3,
-//     title: "Amazon-ի 115 նվեր քարտ",
-//     description:
-//       "Միջազգային օնլայն ու օֆլայն գործարքներդ կատարիր քո Mastercard քարտով",
-//     image:
-//       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-//     link: "#amazon-gift-card",
-//   },
+  {
+    id: 3,
+    title: "Amazon-ի 115 նվեր քարտ",
+    description:
+      "Միջազգային օնլայն ու օֆլայն գործարքներդ կատարիր քո Mastercard քարտով",
+    image:
+      "https://ameriabank.am/Portals/0/Images/campaigns/amazon-gift-card/amazon-special-offer-arm.png",
+    link: "#amazon-gift-card",
+  },
 //   {
 //     id: 4,
 //     title: "Բեր վարկերդ Ամերիա",
