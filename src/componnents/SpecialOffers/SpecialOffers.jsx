@@ -42,15 +42,15 @@ const allSpecialOffers = [
     image:"https://ameriabank.am/Portals/0/Images/special-offers/arca-offer.png",
     link: "#arca-classic",
   },
-//   {
-//     id: 6,
-//     title: "Ճամփորդիր անհոգ",
-//     description:
-//       "Գնիր ճամփորդական փաթեթ MyPay-ով և ստացիր անվճար Fast Track և մուտք lounge սրահ Զվարթնոցում",
-//     image:
-//       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
-//     link: "#travel-carefree",
-//   },
+  {
+    id: 6,
+    title: "Ճամփորդիր անհոգ",
+    description:
+      "Գնիր ճամփորդական փաթեթ MyPay-ով և ստացիր անվճար Fast Track և մուտք lounge սրահ Զվարթնոցում",
+    image:
+      "https://ameriabank.am/Portals/0/Images/special-offers/mypay-travel.png",
+    link: "#travel-carefree",
+  },
 //   {
 //     id: 7,
 //     title: "200 կրթաթոշակ լավագու...",
