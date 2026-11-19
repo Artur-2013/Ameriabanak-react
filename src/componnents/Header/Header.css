@@ -132,13 +132,6 @@
   height: 30px;
   display: block;
 }
-.main-header {
-  display: flex;
-  align-items: center;
-  padding: 16px 200px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
 
 
 .main-header__menu {
@@ -158,4 +151,86 @@
 
 .main-header__item:hover {
   color: #6cc04a;
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 200px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.online-bank {
+  position: relative;
+  margin-left: auto;
+}
+
+.online-bank__btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #6cc04a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.online-bank__btn:hover {
+  background: #5aad3a;
+}
+
+.online-bank__arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  margin-top: -3px;
+  transition: transform 1s;
+}
+
+.online-bank__arrow.open {
+  transform: rotate(-135deg);
+  margin-top: 3px;
+}
+
+.online-bank__list {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+}
+
+.online-bank__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.online-bank__link:hover {
+  background: #f3f3f3;
+}
+
+.online-bank__link img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 6px;
 }
