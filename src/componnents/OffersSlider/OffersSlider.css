@@ -1,0 +1,143 @@
+.offers-slider {
+  padding: 24px var(--side-pad, 60px);
+}
+
+.offers-slider__box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 32px;
+  min-height: 360px;
+  padding: 40px 64px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.offers-slider__title {
+  margin: 0 0 14px;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111827;
+}
+
+.offers-slider__desc {
+  margin: 0 0 24px;
+  max-width: 540px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+.offers-slider__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.offers-slider__btn {
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.offers-slider__btn--green {
+  background-color: #7ec04f;
+  border: 1px solid #7ec04f;
+  color: #ffffff;
+}
+
+.offers-slider__btn--green:hover {
+  background-color: #6dae41;
+}
+
+.offers-slider__btn--outline {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #111827;
+}
+
+.offers-slider__btn--outline:hover {
+  border-color: #111827;
+}
+
+.offers-slider__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offers-slider__img {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.offers-slider__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.offers-slider__nav--prev {
+  left: -18px;
+}
+
+.offers-slider__nav--next {
+  right: -18px;
+}
+
+.offers-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.offers-slider__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  cursor: pointer;
+}
+
+.offers-slider__dot.active {
+  width: 20px;
+  border-radius: 999px;
+  background-color: #7ec04f;
+}
+
+@media (max-width: 900px) {
+  .offers-slider__box {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+  }
+
+  .offers-slider__nav--prev {
+    left: 8px;
+  }
+
+  .offers-slider__nav--next {
+    right: 8px;
+  }
+}

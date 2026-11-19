@@ -5,6 +5,7 @@ import PromoCards from "./componnents/PromoCards/PromoCards";
 import FeedbackTab from "./componnents/Hero/FeedbackTab";
 import ChatButton from "./componnents/Hero/ChatButton";
 import UsefulLinks from "./componnents/UsefulLinks/UsefulLinks";
+import OffersSlider from "./componnents/OffersSlider/OffersSlider";
 import "./componnents/Header/Header.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <FeedbackTab />
       <ChatButton />
       <UsefulLinks />
+      <OffersSlider/>
     </>
   );
 }
