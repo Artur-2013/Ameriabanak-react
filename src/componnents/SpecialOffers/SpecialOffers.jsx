@@ -59,15 +59,15 @@ const allSpecialOffers = [
       "https://ameriabank.am/Portals/0/Images/special-offers/student-offer-arm.png",
     link: "#scholarships",
   },
-//   {
-//     id: 8,
-//     title: "Ավելի բարձր %-ով ավանդ",
-//     description:
-//       "Բացիր ԱՄՆ դոլարով կուտակային ավանդ տարեկան մինչև 4,35%-ով և թող գումարդ ինքն իրեն ավելանա",
-//     image:
-//       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
-//     link: "#higher-deposit",
-//   },
+  {
+    id: 8,
+    title: "Ավելի բարձր %-ով ավանդ",
+    description:
+      "Բացիր ԱՄՆ դոլարով կուտակային ավանդ տարեկան մինչև 4,35%-ով և թող գումարդ ինքն իրեն ավելանա",
+    image:
+      "https://ameriabank.am/Portals/0/Images/special-offers/break-the-glass-offer.png",
+    link: "#higher-deposit",
+  },
 //   {
 //     id: 9,
 //     title: "Ամերիան արդեն Նորք-...",
