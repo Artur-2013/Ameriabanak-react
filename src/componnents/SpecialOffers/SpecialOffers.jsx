@@ -95,15 +95,15 @@ const allSpecialOffers = [
       "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80",
     link: "#visa-paris",
   },
-//   {
-//     id: 12,
-//     title: "Դեպի Լոնդոն Ամերիայի...",
-//     description:
-//       "Բացահայտիր Լոնդոնը Ամերիայի Visa քարտով․ ստացիր զեղչեր ռեստորանների, տեսարժան վայրերի և ժամանցի համար",
-//     image:
-//       "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80",
-//     link: "#visa-london",
-//   },
+  {
+    id: 12,
+    title: "Դեպի Լոնդոն Ամերիայի...",
+    description:
+      "Բացահայտիր Լոնդոնը Ամերիայի Visa քարտով․ ստացիր զեղչեր ռեստորանների, տեսարժան վայրերի և ժամանցի համար",
+    image:
+      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80",
+    link: "#visa-london",
+  },
 ];
 
 const VISIBLE_COUNT = 3;
