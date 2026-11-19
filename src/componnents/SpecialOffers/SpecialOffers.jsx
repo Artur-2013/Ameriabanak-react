@@ -31,21 +31,17 @@ const allSpecialOffers = [
   {
     id: 4,
     title: "Բեր վարկերդ Ամերիա",
-    description:
-      "Ունեցիր 1 անգրավ վարկ՝ մինչև 20,000,000 ֏ սահմանաչափով։ Տեղափոխիր վարկերդ Ամերիա և ունեցիր ցածր տոկոսադրույք՝ 15% ...",
-    image:
-      "https://ameriabank.am/Portals/0/Images/special-offers/refinancing-loan-offer-arm.png",
+    description:"Ունեցիր 1 անգրավ վարկ՝ մինչև 20,000,000 ֏ սահմանաչափով։ Տեղափոխիր վարկերդ Ամերիա և ունեցիր ցածր տոկոսադրույք՝ 15% ...",
+    image:"https://ameriabank.am/Portals/0/Images/special-offers/refinancing-loan-offer-arm.png",
     link: "#transfer-loans",
   },
-//   {
-//     id: 5,
-//     title: "Անվճար ArCa Classic քարտ",
-//     description:
-//       "2% քեշբեք քո վճարումներից։ Պատվիրիր Ամերիաբանկի ArCa անվճար քարտ և ամեն ամիս ստացիր մինչև 60 000 դրամ քեշբե...",
-//     image:
-//       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
-//     link: "#arca-classic",
-//   },
+  {
+    id: 5,
+    title: "Անվճար ArCa Classic քարտ",
+    description:"2% քեշբեք քո վճարումներից։ Պատվիրիր Ամերիաբանկի ArCa անվճար քարտ և ամեն ամիս ստացիր մինչև 60 000 դրամ քեշբե...",
+    image:"https://ameriabank.am/Portals/0/Images/special-offers/arca-offer.png",
+    link: "#arca-classic",
+  },
 //   {
 //     id: 6,
 //     title: "Ճամփորդիր անհոգ",
