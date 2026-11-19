@@ -51,14 +51,14 @@ const allSpecialOffers = [
       "https://ameriabank.am/Portals/0/Images/special-offers/mypay-travel.png",
     link: "#travel-carefree",
   },
-//   {
-//     id: 7,
-//     title: "200 կրթաթոշակ լավագու...",
-//     description: "Ամսական 50,000 հազար ՀՀ դրամ 4 ամիս շարունակ",
-//     image:
-//       "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
-//     link: "#scholarships",
-//   },
+  {
+    id: 7,
+    title: "200 կրթաթոշակ լավագու...",
+    description: "Ամսական 50,000 հազար ՀՀ դրամ 4 ամիս շարունակ",
+    image:
+      "https://ameriabank.am/Portals/0/Images/special-offers/student-offer-arm.png",
+    link: "#scholarships",
+  },
 //   {
 //     id: 8,
 //     title: "Ավելի բարձր %-ով ավանդ",
