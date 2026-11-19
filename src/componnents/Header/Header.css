@@ -163,6 +163,8 @@
 .online-bank {
   position: relative;
   margin-left: auto;
+  text-wrap: nowrap;
+  margin-left: 20px;
 }
 
 .online-bank__btn {

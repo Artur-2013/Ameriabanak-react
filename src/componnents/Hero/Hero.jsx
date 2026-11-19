@@ -39,14 +39,14 @@ function Hero() {
   const next = () => setCurrent((p) => (p + 1) % total);
   const prev = () => setCurrent((p) => (p - 1 + total) % total);
 
-  // ավտոմատ փոխվի 5 վայրկյանը մեկ (քարշ տալու ժամանակ կանգնում է)
+
   useEffect(() => {
     if (dragging) return;
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, [current, dragging]);
 
-  // ---------- քարշ տալ (մկնիկ + մատ) ----------
+
   const handleStart = (clientX) => {
     setDragging(true);
     startX.current = clientX;
