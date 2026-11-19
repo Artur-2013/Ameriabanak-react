@@ -28,15 +28,15 @@ const allSpecialOffers = [
       "https://ameriabank.am/Portals/0/Images/campaigns/amazon-gift-card/amazon-special-offer-arm.png",
     link: "#amazon-gift-card",
   },
-//   {
-//     id: 4,
-//     title: "Բեր վարկերդ Ամերիա",
-//     description:
-//       "Ունեցիր 1 անգրավ վարկ՝ մինչև 20,000,000 ֏ սահմանաչափով։ Տեղափոխիր վարկերդ Ամերիա և ունեցիր ցածր տոկոսադրույք՝ 15% ...",
-//     image:
-//       "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80",
-//     link: "#transfer-loans",
-//   },
+  {
+    id: 4,
+    title: "Բեր վարկերդ Ամերիա",
+    description:
+      "Ունեցիր 1 անգրավ վարկ՝ մինչև 20,000,000 ֏ սահմանաչափով։ Տեղափոխիր վարկերդ Ամերիա և ունեցիր ցածր տոկոսադրույք՝ 15% ...",
+    image:
+      "https://ameriabank.am/Portals/0/Images/special-offers/refinancing-loan-offer-arm.png",
+    link: "#transfer-loans",
+  },
 //   {
 //     id: 5,
 //     title: "Անվճար ArCa Classic քարտ",
