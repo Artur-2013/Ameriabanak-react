@@ -444,6 +444,14 @@
   color: #5a6573;
   margin: 0 0 22px 0;
 }
+.hdr-burger span {
+  display: block; height: 2.5px; width: 100%;
+  background: var(--text); border-radius: 2px;
+  transition: transform .25s, opacity .2s;
+}
+.hdr-burger.open span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+.hdr-burger.open span:nth-child(2) { opacity: 0; }
+.hdr-burger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
 
 /* 3, 4, 5. Split Sections (Տեքստ + Նկար) */
 .split-section {
