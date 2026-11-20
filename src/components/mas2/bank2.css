@@ -1,0 +1,28 @@
+.main-nav-right {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.online-banking-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #78be43;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+}
+
+.online-banking-btn:hover {
+  background-color: #66a636;
+}
+
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+}   
