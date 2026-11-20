@@ -1,7 +1,7 @@
 .hero-cards-section {
   position: relative;
   background-color: #f1f4f7;
-  padding: 48px 24px 0;
+  padding: 40px 24px 0;
   overflow: hidden;
   font-family: sans-serif;
 }
@@ -33,7 +33,7 @@
 
 .hero-cards-content {
   max-width: 540px;
-  padding-bottom: 56px;
+  padding-bottom: 42px;
 }
 
 .hero-cards-title {
@@ -75,7 +75,7 @@
 
 .hero-cards-img {
   display: block;
-  max-width: 520px;
+  max-width: 500px;
   width: 100%;
   height: auto;
   object-fit: contain;

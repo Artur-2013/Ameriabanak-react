@@ -19,7 +19,7 @@ export default function Bank3() {
 
         <div className="hero-cards-visual">
           <img
-            src="https://placehold.co/520x360/eef2f5/555555?text=Card+Holder+Image"
+            src="https://placehold.co/520x340/eef2f5/555555?text=Card+Holder+Image"
             alt="Վճարային քարտեր"
             className="hero-cards-img"
           />

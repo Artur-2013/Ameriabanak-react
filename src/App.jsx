@@ -3,6 +3,7 @@ import Header2 from "./components/header/header2";
 import Bank1 from "./components/mas2/bank1";
 import Bank2 from "./components/mas2/bank2";
 import Bank3 from "./components/mas3/bank3";
+import Bank4 from "./components/mas3/bank4";
 import "./App.css";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Bank2 />
       </div>
       <Bank3 />
+      <Bank4 />
     </>
   );
 }
