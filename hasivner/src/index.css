@@ -1,0 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap');
+
+:root{font-family:'Manrope','Noto Sans Armenian',Arial,sans-serif;color:#17191c;background:#fff;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;--green:#69bf3b;--green-dark:#4d9f28;--ink:#17191c;--muted:#646c75;--line:#e7e9ec;--pale:#f2f6fa;--container:1310px;font-weight:400;font-size:16px;scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;min-width:320px}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{color:inherit}img{display:block;max-width:100%}h1,h2,h3,p{margin-top:0}::selection{background:#bfe8a8;color:#1d3212}
