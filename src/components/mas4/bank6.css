@@ -1,0 +1,174 @@
+.digital-card-box {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 28px 32px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  font-family: sans-serif;
+}
+
+.digital-card-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.digital-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.digital-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.digital-system {
+  font-size: 14px;
+  font-weight: 800;
+  font-style: italic;
+  color: #1a237e;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.digital-description {
+  margin: 0 0 22px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #374151;
+}
+
+.digital-stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.digital-stat-item {
+  max-width: 210px;
+}
+
+.digital-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.digital-stat-label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #4b5563;
+}
+
+.digital-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-order {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #67b93e;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-order:hover {
+  background-color: #58a332;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 11px 20px;
+  background-color: #ffffff;
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.btn-more:hover {
+  background-color: #f9fafb;
+}
+
+.digital-card-right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.visual-digital-card {
+  position: relative;
+  width: 280px;
+  height: 175px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #74c743 0%, #5fb332 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.visual-digital-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visual-digital-brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.visual-digital-side-text {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 10px;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.visual-digital-visa {
+  align-self: flex-end;
+  font-size: 22px;
+  font-weight: 800;
+  font-style: italic;
+  color: #1a237e;
+  opacity: 0.85;
+  letter-spacing: 1px;
+}
+
+.digital-annual-fee {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
