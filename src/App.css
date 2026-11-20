@@ -1,62 +1,448 @@
-*, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; overflow-x: hidden; }
+.site-header {
+  --green: #6cbf2f;
+  --green-dark: #58a323;
+  --ink: #1a1a1a;
+  --muted: #555;
+  --line: #e8e8e8;
+  --topbar-bg: #f9f9f9;
 
-:root {
-  --accent: #7ab84a;
-  --text: #111;
-  --muted: #666;
+  font-family: "Noto Sans Armenian", "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.hdr { font-family: "Noto Sans Armenian", system-ui, sans-serif; width: 100%; }
-.hdr a { text-decoration: none; color: inherit; }
-.hdr-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
-
-/* ===== Վերին շերտ ===== */
-.hdr-top { background: #fafafa; border-bottom: 1px solid #eee; }
-.hdr-top-inner { display: flex; justify-content: space-between; align-items: center; height: 56px; }
-.hdr-top-links { display: flex; gap: 24px; }
-.hdr-top-links a { font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
-
-.hdr-utils { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: 16px; }
-.hdr-util { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
-.hdr-util:hover { color: var(--accent); }
-.hdr-util-icon { display: inline-flex; }
-.hdr-util-icon svg, .hdr-search svg { width: 26px; height: 26px; }
-.hdr-search, .hdr-lang { background: none; border: 0; cursor: pointer; font: inherit; color: inherit; display: inline-flex; align-items: center; padding: 0; }
-.hdr-search:hover { color: var(--accent); }
-.hdr-lang { color: var(--accent); font-weight: 600; gap: 8px; }
-.hdr-caret { border: 6px solid transparent; border-top-color: var(--accent); border-bottom: 0; display: inline-block; }
-
-/* ===== Հիմնական շերտ ===== */
-.hdr-main { background: #fff; border-bottom: 1px solid #eee; position: relative; }
-.hdr-main-inner { display: flex; align-items: center; gap: 40px; height: 90px; }
-
-.hdr-logo { display: flex; align-items: center; gap: 8px; font-size: 30px; letter-spacing: 1px; white-space: nowrap; }
-.hdr-logo-mark {
-  width: 40px; height: 40px; border: 1.5px solid var(--accent); border-radius: 6px;
-  color: var(--accent); display: grid; place-items: center; font-weight: 700; flex-shrink: 0;
+.site-header a {
+  color: inherit;
+  text-decoration: none;
 }
-.hdr-logo-text b { color: var(--accent); font-weight: 600; }
 
-.hdr-nav { display: flex; gap: 40px; flex: 1; }
-.hdr-nav a { font-weight: 700; font-size: 18px; color: var(--text); transition: color .15s; white-space: nowrap; }
-.hdr-nav a:hover, .hdr-nav a.active { color: var(--accent); }
-
-.hdr-cta {
-  background: var(--accent); color: #fff !important; padding: 16px 26px;
-  border-radius: 16px; font-size: 18px; display: flex; align-items: center; gap: 10px;
-  white-space: nowrap; transition: filter .15s;
-  width: 100%; max-width: 240px; justify-content: center;
+.site-header button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
 }
-.hdr-cta:hover { filter: brightness(0.93); }
-.hdr-cta span { font-size: 24px; line-height: 1; }
-.hdr-cta-mobile { display: none; }
 
-/* Բուրգեր կոճակ (մեծ էկրաններին թաքնված է) */
-.hdr-burger {
-  display: none; background: none; border: 0; cursor: pointer;
-  width: 44px; height: 44px; padding: 10px; margin-left: auto; flex-shrink: 0;
-  flex-direction: column; justify-content: center; gap: 6px;
+.site-header a:focus-visible,
+.site-header button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/* ---------- Верхняя панель ---------- */
+
+.topbar {
+  background: var(--topbar-bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.segments {
+  display: flex;
+  gap: 16px;
+}
+
+.segments__link {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.segments__link:hover,
+.segments__link.is-active {
+  color: var(--green-dark);
+}
+
+.utility {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.utility__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.utility__item:hover {
+  color: var(--ink);
+}
+
+.icon {
+  flex: none;
+}
+
+.utility__search {
+  display: inline-flex;
+  padding: 2px;
+  color: var(--ink);
+}
+
+.utility__search .icon {
+  width: 26px;
+  height: 26px;
+}
+
+/* ---------- Переключатель языка ---------- */
+
+.lang {
+  position: relative;
+}
+
+.lang__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--green);
+  padding: 4px 6px;
+}
+
+.lang__caret {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid currentColor;
+  transition: transform 0.15s ease;
+}
+
+.lang__caret.is-open {
+  transform: rotate(180deg);
+}
+
+.lang__menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 90px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lang__menu button {
+  width: 100%;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.lang__menu button:hover,
+.lang__menu button[aria-selected="true"] {
+  background: #f1f8ea;
+  color: var(--green-dark);
+}
+
+/* ---------- Основная панель ---------- */
+
+.mainbar {
+  border-bottom: 1px solid var(--line);
+}
+
+.mainbar__inner {
+  display: flex;
+  align-items: center;
+  height: 102px;
+  gap: 48px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+.logo__mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  color: var(--green);
+}
+
+.logo__text {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+}
+
+.logo__green {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+}
+
+.nav__link {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+  color: var(--green);
+}
+
+.cta {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  height: 48px;
+  padding: 0 18px 0 20px;
+  border-radius: 12px;
+  background: var(--green);
+  color: #fff !important;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.cta:hover {
+  background: var(--green-dark);
+}
+
+/* ---------- Адаптив ---------- */
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .mainbar__inner {
+    gap: 28px;
+  }
+
+  .nav {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .utility__item:not(:nth-child(3)) {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mainbar__inner {
+    justify-content: space-between;
+    height: 72px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .segments {
+    gap: 10px;
+  }
+
+  .segments__link {
+    font-size: 13px;
+  }
+
+  .utility__item {
+    display: none;
+  }
+}
+
+/* Հիմնական կարգավորումներ */
+.loans-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  color: #1e252b;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Կոճակներ */
+.btn-green {
+  background-color: #6cc04a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-green:hover {
+  background-color: #5ba83c;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: auto;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: #1e252b;
+  color: #1e252b;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* 1. Hero Section */
+.hero-section {
+  background-color: #f3f5f7;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 500px;
+  padding-bottom: 40px;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  color: #1a202c;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #5a6573;
+  margin: 0 0 26px 0;
+}
+
+.hero-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2. Featured Cards Section */
+.featured-cards-section {
+  padding: 60px 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.loan-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-box {
+  background-color: #f3f5f7;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 250px;
+}
+
+.card-image-box img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 18px;
+}
+
+.hashtag {
+  font-size: 12px;
+  color: #8c96a3;
+  margin-bottom: 6px;
+}
+
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #5a6573;
+  margin: 0 0 22px 0;
 }
 .hdr-burger span {
   display: block; height: 2.5px; width: 100%;
@@ -67,128 +453,614 @@ html, body { margin: 0; overflow-x: hidden; }
 .hdr-burger.open span:nth-child(2) { opacity: 0; }
 .hdr-burger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
 
-
-/* =========================================================
-   ՄԵԾ ԷԿՐԱՆՆԵՐ
-   ========================================================= */
-
-/* 1321–1500px — վերին շերտը մի փոքր կոմպակտ */
-@media (min-width: 1321px) and (max-width: 1500px) {
-  .hdr-top-links a { font-size: 16px; }
-  .hdr-utils { gap: 18px; font-size: 15px; }
+/* 3, 4, 5. Split Sections (Տեքստ + Նկար) */
+.split-section {
+  padding: 65px 0;
 }
 
-/* ≥ 1600px — Full HD */
-@media (min-width: 1600px) {
-  .hdr-container { max-width: 1440px; padding: 0 32px; }
-  .hdr-top-inner { height: 60px; }
-  .hdr-top-links a { font-size: 19px; }
-  .hdr-main-inner { height: 100px; gap: 48px; }
-  .hdr-logo { font-size: 34px; }
-  .hdr-logo-mark { width: 44px; height: 44px; }
-  .hdr-nav { gap: 48px; }
-  .hdr-nav a { font-size: 20px; }
-  .hdr-cta { font-size: 20px; padding: 18px 30px; }
+.bg-white {
+  background-color: #ffffff;
 }
 
-/* ≥ 1900px — 1920px մոնիտորներ */
-@media (min-width: 1900px) {
-  .hdr-container { max-width: 1680px; padding: 0 40px; }
-  .hdr-top-inner { height: 64px; }
-  .hdr-top-links a { font-size: 20px; }
-  .hdr-utils { font-size: 18px; gap: 26px; }
-  .hdr-main-inner { height: 108px; gap: 56px; }
-  .hdr-nav { gap: 56px; }
-  .hdr-nav a { font-size: 21px; }
-  .hdr-cta { font-size: 21px; }
+.bg-gray {
+  background-color: #f3f5f7;
 }
 
-/* ≥ 2560px — 2K/4K */
-@media (min-width: 2560px) {
-  .hdr-container { max-width: 2100px; }
-  .hdr-top-links a, .hdr-nav a, .hdr-cta { font-size: 24px; }
-  .hdr-utils { font-size: 21px; }
-  .hdr-logo { font-size: 40px; }
-  .hdr-main-inner { height: 130px; }
+.split-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
 }
 
-
-/* =========================================================
-   ՓՈՔՐ ԷԿՐԱՆՆԵՐ
-   ========================================================= */
-
-/* ≤ 1320px — մենյուն դառնում է բացվող (բուրգեր) */
-@media (max-width: 1320px) {
-  .hdr-burger { display: flex; }
-  .hdr-main-inner { height: 76px; }
-  .hdr-cta { display: none; }
-
-  .hdr-nav {
-    position: absolute; top: 100%; left: 0; right: 0;
-    flex-direction: column; gap: 0; flex: none;
-    background: #fff; border-bottom: 1px solid #eee;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, .08);
-    max-height: 0; overflow: hidden; visibility: hidden;
-    transition: max-height .3s ease, visibility .3s;
-    z-index: 100;
-  }
-  .hdr-nav.open { max-height: 80vh; visibility: visible; overflow-y: auto; }
-  .hdr-nav a { padding: 18px 24px; font-size: 18px; border-top: 1px solid #f1f1f1; }
-  .hdr-nav a.hdr-cta-mobile {
-    display: flex; justify-content: center;
-    margin: 16px 24px 20px; padding: 16px 24px; border-top: 0; color: #fff;
-  }
+/* Հիփոթեքային բաժնի համար նկարը ձախից, տեքստը աջից */
+.split-container.reverse {
+  flex-direction: row-reverse;
 }
 
-/* ≤ 768px — մեծ հեռախոսներ / փոքր պլանշետներ */
+.split-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.split-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: #5a6573;
+  margin: 0 0 22px 0;
+}
+
+/* Կանաչ սլաքներով ցուցակ */
+.loan-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.loan-list li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #2d3748;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.loan-list li:hover {
+  color: #6cc04a;
+}
+
+.loan-list .arrow {
+  color: #6cc04a;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.split-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Responsive (Հեռախոսների և պլանշետների համար) */
 @media (max-width: 768px) {
-  .hdr-container { padding: 0 16px; }
-  .hdr-top-inner { height: 48px; }
-  .hdr-top-links { gap: 16px; }
-  .hdr-top-links a { font-size: 14px; }
-  .hdr-utils { gap: 14px; }
-  .hdr-util { font-size: 0; gap: 0; }
-  .hdr-util-icon svg, .hdr-search svg { width: 22px; height: 22px; }
-  .hdr-nav a { padding: 16px; }
-  .hdr-nav a.hdr-cta-mobile { margin: 16px; }
+  .hero-container,
+  .split-container,
+  .split-container.reverse {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+/* ================= LOANS PAGE STYLES ================= */
+.loans-page {
+  color: #1e252b;
+  background-color: #ffffff;
+  line-height: 1.5;
 }
 
-/* ≤ 480px — հեռախոսներ */
-@media (max-width: 480px) {
-  .hdr-top-links { gap: 12px; }
-  .hdr-top-links a { font-size: 12px; letter-spacing: 0; }
-  .hdr-top-links a:nth-child(3) { display: none; }
-  .hdr-utils .hdr-util:nth-child(-n+2) { display: none; }
-  .hdr-main-inner { height: 64px; gap: 16px; }
-  .hdr-logo { font-size: 22px; }
-  .hdr-logo-mark { width: 32px; height: 32px; }
-  .hdr-lang { font-size: 14px; }
+/* Կոճակներ */
+.btn-green {
+  background-color: #6cc04a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-/* ≤ 360px — փոքր հեռախոսներ */
-@media (max-width: 360px) {
-  .hdr-container { padding: 0 12px; }
-  .hdr-top-links { gap: 10px; }
-  .hdr-top-links a { font-size: 11px; }
-  .hdr-utils { gap: 10px; }
-  .hdr-utils .hdr-util:nth-child(3) { display: none; }
-  .hdr-logo { font-size: 19px; letter-spacing: 0.5px; }
-  .hdr-logo-mark { width: 28px; height: 28px; font-size: 14px; }
-  .hdr-burger { width: 40px; height: 40px; padding: 9px; }
-  .hdr-nav a { padding: 14px 12px; font-size: 16px; }
-  .hdr-nav a.hdr-cta-mobile { margin: 12px; font-size: 16px; }
+.btn-green:hover {
+  background-color: #5ba83c;
 }
 
-/* ≤ 320px — շատ նեղ էկրաններ (մինչև 300px) */
-@media (max-width: 320px) {
-  .hdr-top-links a:nth-child(2) { display: none; }
-  .hdr-utils .hdr-util { display: none; }
-  .hdr-logo { font-size: 17px; }
-  .hdr-logo-mark { width: 26px; height: 26px; }
-  .hdr-main-inner { gap: 8px; }
+.btn-full {
+  width: 100%;
+  margin-top: auto;
 }
 
-/* «Նվազեցված անիմացիա» կարգավորում */
-@media (prefers-reduced-motion: reduce) {
-  .hdr-nav, .hdr-burger span { transition: none; }
+.btn-outline {
+  background-color: transparent;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: #1e252b;
+  color: #1e252b;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* 1. Hero Section */
+.hero-section {
+  background-color: #f3f5f7;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 500px;
+  padding-bottom: 40px;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  color: #1a202c;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #5a6573;
+  margin: 0 0 26px 0;
+}
+
+.hero-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2. Featured Cards Section */
+.featured-cards-section {
+  padding: 60px 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.loan-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-box {
+  background-color: #f3f5f7;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 250px;
+}
+
+.card-image-box img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 18px;
+}
+
+.hashtag {
+  font-size: 12px;
+  color: #8c96a3;
+  margin-bottom: 6px;
+}
+
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #5a6573;
+  margin: 0 0 22px 0;
+}
+
+/* 3, 4, 5. Split Sections */
+.split-section {
+  padding: 65px 0;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-gray {
+  background-color: #f3f5f7;
+}
+
+.split-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.split-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.split-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.split-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: #5a6573;
+  margin: 0 0 22px 0;
+}
+
+.loan-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.loan-list li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #2d3748;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.loan-list li:hover {
+  color: #6cc04a;
+}
+
+.loan-list .arrow {
+  color: #6cc04a;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.split-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container,
+  .split-container,
+  .split-container.reverse {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+/* ================= EXTRA CARDS SECTION ================= */
+.extra-cards-section {
+  padding: 60px 0 40px 0;
+  background-color: #ffffff;
+}
+
+.extra-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.extra-card {
+  background-color: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.extra-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.extra-card-content {
+  padding: 26px 26px 20px 26px;
+}
+
+.extra-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.extra-card-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #1e252b;
+}
+
+.extra-card-icon {
+  background-color: #1e252b;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.extra-card-content p {
+  font-size: 13px;
+  color: #5a6573;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.card-link-bar {
+  background-color: #edf4f9;
+  padding: 14px 26px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6cc04a;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.card-link-bar:hover {
+  background-color: #e2eef7;
+}
+
+.card-link-bar .arrow {
+  margin-left: 8px;
+  font-size: 15px;
+}
+
+/* PDF Link */
+.pdf-info-link {
+  padding-top: 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pdf-dot {
+  color: #6cc04a;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.pdf-info-link a {
+  color: #6cc04a;
+  text-decoration: none;
+}
+
+.pdf-info-link a:hover {
+  text-decoration: underline;
+}
+
+.pdf-badge {
+  color: #2d3748;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ================= FOOTER SECTION ================= */
+.site-footer {
+  background-color: #222222;
+  color: #cccccc;
+  padding: 50px 0 25px 0;
+  font-size: 12px;
+}
+
+.footer-disclaimer {
+  margin-bottom: 35px;
+}
+
+.footer-disclaimer p {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  color: #d4d4d4;
+}
+
+.footer-disclaimer strong {
+  color: #ffffff;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.8fr 1fr;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #6cc04a;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-icon {
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.contact-item strong {
+  display: block;
+  color: #ffffff;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #6cc04a;
+}
+
+.sub-note {
+  font-size: 10px;
+  color: #999999;
+  margin: 0;
+}
+
+.copyright {
+  font-size: 10px;
+  color: #b0b0b0;
+  margin: 15px 0 0 0;
+  padding-top: 15px;
+  border-top: 1px solid #333333;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .extra-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
 }
