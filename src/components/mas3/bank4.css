@@ -1,0 +1,78 @@
+.planet-banner-wrapper {
+  position: relative;
+  max-width: 1280px;
+  margin: -18px auto 32px;
+  padding: 0 24px;
+  font-family: sans-serif;
+}
+
+.planet-banner {
+  background-color: #35688f;
+  border-radius: 22px;
+  padding: 24px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.planet-banner-text {
+  max-width: 640px;
+}
+
+.planet-banner-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.planet-banner-desc {
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.planet-banner-art {
+  flex-shrink: 0;
+}
+
+.planet-banner-img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.floating-help-box {
+  position: fixed;
+  right: 24px;
+  bottom: 84px;
+  background-color: #ffffff;
+  color: #222222;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 30;
+}
+
+.floating-chat-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background-color: #78be43;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  z-index: 30;
+}

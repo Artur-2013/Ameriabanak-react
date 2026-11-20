@@ -1,0 +1,59 @@
+.main-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-family: sans-serif;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1.8px solid #78be43;
+  border-radius: 6px;
+  color: #78be43;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.logo-green {
+  color: #78be43;
+}
+
+.logo-black {
+  color: #222222;
+}
+
+.main-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.main-link-item {
+  background-color: #78be43;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease;
+}
+
+.main-link-item:hover {
+  background-color: #66a636;
+}
