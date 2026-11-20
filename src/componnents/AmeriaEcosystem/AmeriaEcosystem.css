@@ -1,0 +1,140 @@
+.ecosystem {
+  position: relative;
+  min-height: 620px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  transition: background-image 0.4s ease;
+}
+
+.ecosystem__overlay {
+  min-height: 620px;
+  padding: 56px 24px 40px;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 42, 74, 0.55) 0%,
+    rgba(17, 24, 39, 0.35) 55%,
+    rgba(17, 24, 39, 0.65) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.ecosystem__top {
+  max-width: 680px;
+}
+
+.ecosystem__title {
+  margin: 0 0 12px;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.ecosystem__subtitle {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ecosystem__desc {
+  margin: 0 0 22px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ecosystem__cta {
+  padding: 11px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.ecosystem__cta:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.ecosystem__phone-frame {
+  width: 240px;
+  height: 290px;
+  margin: 24px 0;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 18px;
+}
+
+.ecosystem__phone-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.ecosystem__circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.ecosystem__circle--active {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.ecosystem__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.ecosystem__tab {
+  min-width: 120px;
+  padding: 11px 22px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background-color: rgba(17, 24, 39, 0.35);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ecosystem__tab:hover {
+  border-color: #ffffff;
+}
+
+.ecosystem__tab.is-active {
+  background-color: #7ec04f;
+  border-color: #7ec04f;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .ecosystem__title {
+    font-size: 36px;
+  }
+
+  .ecosystem__phone-frame {
+    width: 200px;
+    height: 230px;
+  }
+}

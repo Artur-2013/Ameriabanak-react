@@ -1,0 +1,60 @@
+.useful-links {
+  padding: 50px var(--side-pad, 60px) 70px;
+  background-color: #f4f5f7;
+}
+
+.useful-links__title {
+  margin: 0 0 32px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.useful-links__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.useful-links__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 145px;
+  padding: 24px;
+  background-color: whitesmoke;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 1s ease, box-shadow 0.2s ease;
+}
+
+.useful-links__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.useful-links__icon {
+  margin-bottom: 24px;
+}
+
+.useful-links__card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Հեռախոսների և պլանշետների համար */
+@media (max-width: 1024px) {
+  .useful-links__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .useful-links__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
